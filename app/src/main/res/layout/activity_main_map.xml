@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_list"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btBasic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기본 지도 보기"/>
+
+    <Button
+        android:id="@+id/btZoomPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="위치와 줌 설정된 지도 보기"/>
+
+    <Button
+        android:id="@+id/btMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마커 표시"/>
+
+    <Button
+        android:id="@+id/btUiOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UI &amp; 오버레이"/>
+
+</LinearLayout>

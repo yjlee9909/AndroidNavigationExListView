@@ -1,20 +1,18 @@
 package com.example.androidnavigationexlistview.Helper;
 
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.androidnavigationexlistview.Fragments.FragmentContent;
 import com.example.androidnavigationexlistview.Interface.NavigationManager;
-import com.example.androidnavigationexlistview.MainActivity;
+import com.example.androidnavigationexlistview.MainActivity_list;
 
 public class FragmentNavigationManager implements NavigationManager {
     private static FragmentNavigationManager mInstance;
 
     private FragmentManager mFragmentManager;
-    private MainActivity mainActivity;
+    private MainActivity_list mainActivity;
 
 
-    public static FragmentNavigationManager getmInstance(MainActivity mainActivity)
+    public static FragmentNavigationManager getmInstance(MainActivity_list mainActivity)
     {
         if(mInstance == null)
             mInstance = new FragmentNavigationManager();
@@ -23,7 +21,7 @@ public class FragmentNavigationManager implements NavigationManager {
         return mInstance;
     }
 
-    private void configure(MainActivity mainActivity) {
+    private void configure(MainActivity_list mainActivity) {
         mainActivity = mainActivity;
         mFragmentManager = mainActivity.getSupportFragmentManager();
     }

@@ -26,7 +26,7 @@ import java.util.TreeMap;
 
 import Adapter.CustomExpandableListAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_list extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         navigationManager = FragmentNavigationManager.getmInstance(this);
         initItems();
 
-        View listHeaderView = getLayoutInflater().inflate(R.layout.nav_header,null,false);
+        View listHeaderView = getLayoutInflater().inflate(R.layout.nav_header_main,null,false);
         expandableListView.addHeaderView(listHeaderView);
 
         genData();
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle("EDMTDev");
+        getSupportActionBar().setTitle("@string/app_name");
 
     }
 
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
             @Override
             public void onGroupCollapse(int groupPosition) {
-                getSupportActionBar().setTitle("EDMTDev");
+                getSupportActionBar().setTitle("@string/app_name");
             }
         });
 
@@ -153,8 +153,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void genData() {
-        List<String> title = Arrays.asList("Android Programing","Xamarin Programing","iOS Programing");
-        List<String> childitem = Arrays.asList("Beginner","Intermediate","Advanced","Professional");
+        List<String> title = Arrays.asList("홈","편의시설","음식점","문화");
+        List<String> childitem = Arrays.asList("병원","병원검색하기","Advanced","Professional");
 
         lstChild = new TreeMap<>();
         lstChild.put(title.get(0),childitem);
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initItems() {
 
-        items = new String[]{"Android Programing","Xamarin Programing","iOS Programing"};
+        items = new String[]{"홈","편의시설","음식점","문화"};
 
     }
 
